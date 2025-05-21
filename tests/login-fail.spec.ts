@@ -4,8 +4,8 @@ test.describe('Suite de inicio de sesión fallido', () => {
   test('Login con credenciales inválidas debe fallar', async ({ page }) => {
     await page.goto('https://automationexercise.com');
     await page.click('a[href="/login"]');
-    await page.fill('input[data-qa="login-email"]', 'wrong@example.com');
-    await page.fill('input[data-qa="login-password"]', 'wrongpassword');
+    await page.fill('input[data-qa="login-email"]', 'sofia@gmail.com');
+    await page.fill('input[data-qa="login-password"]', 'aloha');
     await page.click('button[data-qa="login-button"]');
 
     const errorMsg = await page.locator('p').innerText();
